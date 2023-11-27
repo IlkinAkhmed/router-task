@@ -1,0 +1,110 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 200px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #1FA67A;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aquamarine;
+
+    .headText {
+        font-size: 30px;
+    }
+
+    .nav-texts {
+        display: flex;
+        font-size: 15px;
+        height: 100%;
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            color: gray;
+            cursor: pointer;
+            padding: 0 25px;
+            position: relative;
+
+            .fa-sort-down {
+                margin-left: 5px;
+                position: absolute;
+                right: 10px;
+                top: 25px;
+            }
+            .fa-sort-up{
+                margin-left: 5px;
+                position: absolute;
+                right: 10px;
+                top: 30px;
+
+            }
+
+            &:hover {
+                background-color: #1FA67A;
+                color: white;
+
+            }
+        }
+
+
+        .active {
+            background-color: #1FA67A;
+            color: white;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 340px;
+            padding: 20px;
+            height: 400px;
+            color: gray;
+            display: none;
+            background-color: white;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                li {
+                    height: 40px;
+
+                    p {
+                        font-size: 13px;
+                    }
+
+                    .dropDownLink {
+                        color: gray;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        font-size: 17px;
+
+                        &:hover {
+                            background-color: #1FA67A;
+                            color: white;
+                        }
+                        .fa-barcode{
+                            transform: rotate(90deg);
+                        }
+                        .fa-solid, .fa-regular{
+                            margin-right: 10px;
+                        }
+                    }
+                    .disabled {
+                        cursor: not-allowed !important;
+                    }
+                }
+            }
+        }
+    }
+}
+.d-block{
+    display: block!important;
+}
